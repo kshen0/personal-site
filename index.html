@@ -2,11 +2,64 @@
 <html>
   <head>
     <title></title>
-    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <!-- Third party libraries-->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="/js/lib/underscore-min.js"></script>
+    <script src="/js/lib/less-1.4.1.min.js" type="text/javascript"></script>
   </head>
   <body>
+    <div id="navbar" class="outset_shadow">
+      <div id="nav_content">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="/Kevin_Shen_Resume.pdf">Resume</a></li>
+          <li><a href="http://www.github.com/kshen0">Github</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="wrap" class="clearfix outset_shadow">
+      <section id="about" class="clearfix">
+        <h2>Kevin Shen</h2>
+        <div class="left">
+          <p>
+            Currently, I'm an intern at <a href="http://www.getclever.com/">Clever</a> and rising senior at the University of Pennsylvania. My degree program, <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>, is a computer science degree with a small fine arts component. My primary interests are web development and data visualization.
+          </p>
+          <p>
+            I also enjoy animated movies, rock climbing, hiking, video games, and <a href="/streamgraph">sad Canadian indie rock bands</a>.
+          </p>
+        </div>
+        <div class="right">
+          <div id="image"></div>
+        </div>
+      </section>
+      <section id="work">
+        <article id="nyt" class="clearfix">
+          <h2>Projects</h2>
+          <div class="left">
+            <h3><a href="/nyt">The Geographic New York Times</a></h3>
+            <p>A visualization of which geographic regions are most commonly written about by the New York Times. Countries that are darker have more articles per capita. Alternatively, you can click the "Lights" button to see individual points of interest.<p>Unsurprisingly, the most frequently featured areas are clustered around New York. New Zealanders may notice the New York Times tags their data with only a few cities: Auckland, Wellington, Dunedin, Invercargill, and Queenstown.</p>
+            <p>Built with d3js, the New York Times API, and Natural Earth.
+          </div>
+          <div class="right">
+            <a id="globe" class="inset_shadow" href="/nyt"></a>
+          </div>
+        </article>
+        <article id="streamgraph" class="clearfix">
+          <div class="left">
+            <h3><a href="/streamgraph">Personal Top 40</a></h3>
+            <p>The last four years of my <a href="http://www.last.fm/user/yellowJumpsuit/">last .fm</a> history represented in a streamgraph. Associations I make with certain songs and artists are noted in tooltips. The top 40 artists are ordered from most to least listened-to, top to bottom. This was made for an autobiographical project for my Information Visualization and Design class. Inspired by <a href="http://www.leebyron.com/else/streamgraph/">Lee Byron's streamgraph</a>.</p>
+            <p>The vertical thickness of a stream represents the listening frequency for that artist for that month. You may toggle sound by clicking the speaker button in the bottom left; when sound is on, months with strong associations to songs or artists will play a track.
+            <p>Built with d3js and the last.fm API</p>
+          </div>
+          <div class="right">
+            <a id="streamgraph" class="inset_shadow" href="/streamgraph"></a>
+          </div>
+        </article>
+      </section>
+    </div>
   </body>
 </html>

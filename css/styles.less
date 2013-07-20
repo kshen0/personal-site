@@ -1,8 +1,10 @@
 @offwhite: #ecf0f1;
 @grey: #95a5a6;
+@silver: #bdc3c7;
 @grey_blue: #34495e;
 @midnight_blue: #2c3e50;
-@sky: #2980b9;
+@cobalt: #2980b9;
+@sky: #3498db;
 @slate: #464646;
 @line_height: 1.2em;
 
@@ -14,18 +16,22 @@ body {
   width: 100%;
   height: 100%;
   //font-family: 'Buenard', 'Georgia', serif;  
-  font-family: 'Raleway', 'Futura', 'Helvetica', 'Arial', sans-serif;
+  //font-family: 'Raleway', 'Futura', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Buenard', 'Georgia', serif;  
   margin: 0px;
   background-image: url("../img/noisy_grid.png");
   background-color: rgba(52, 73, 94, 0.2);
   //background-color: @grey_blue;
+  h2, h3 {
+    font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  }
 }
 
 
 @nav_width: 800px;
 #navbar {width: 100%; height: 40px;
   //background-color: rgba(0, 0, 0, .9);
-  background-color: #000; 
+  background-color: @cobalt;
   position: relative;
   top: 0px;
 
@@ -81,17 +87,15 @@ body {
 }
 
 .inset_shadow {
-  // Inner shadow
-  //-moz-box-shadow: inset 0 0px 2px #000; 
-  -webkit-box-shadow: inset 0px 0px 6px -1px @slate; 
-  //box-shadow: inner 0px 0px 0px 0px #000; 
+  -moz-box-shadow: inset 0 0px 3px -1px @slate; 
+  -webkit-box-shadow: inset 0px 0px 3px -1px @slate; 
+  box-shadow: inner 0px 0px 3px -1px @slate; 
 }
 
 .outset_shadow {
-  // Outer shadow
-  -moz-box-shadow: 0px 5px 5px 10px #000; 
-  -webkit-box-shadow: 0px 5px 5px 10px #000; 
-  box-shadow: 0px 0px 1px 0px @midnight_blue; 
+  -moz-box-shadow: 0px 0px 1px 0px @midnight_blue;
+  -webkit-box-shadow: 0px 0px 1px 0px @midnight_blue; 
+  box-shadow: 0px 0px 1px 1px @silver; 
 }
 
 .clearfix:before,
@@ -104,72 +108,112 @@ body {
   clear: both;
 }
 
-#wrap {
+#wrap_outer {
+  margin: 30px auto 0 auto;
   width: 1000px;
-  height: 100%;
-  margin: 20px auto 0 auto;
-  padding: 20px;
   background-color: #fff;
 
-  a {
-    text-decoration: none;
-    color: @sky;
+  #strip {
+    width: 100%;
+    height: 7px;
+    background-color: @cobalt;
   }
 
-  a:hover {
-    text-decoration: none;
-    border-bottom: 1px dashed @sky;
-  }
+  #wrap {
+    padding: 40px;
 
-  .left {
-    width: 500px;
-    float: left;
-    padding: 0 10px;
-  }
-
-  .right {
-     
-    display: inline-block;
-    width: 200px;
-    float: right;
-    margin-top: 20px;
+    a {
+      text-decoration: none;
+      color: @cobalt;
+    }
 
     a:hover {
-      border-bottom: 0px; 
+      text-decoration: none;
+      border-bottom: 1px dashed @sky;
     }
 
-    #image {
-      border-radius: 74px 74px;
-      width: 150px;
-      height: 150px;
-      background-image: url("../img/kevin_circle_150.png");
-      float: right;
+    hr {
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-    #globe {
+    #about {
+
+      h2 {
+        text-align: center;
+        margin-top: 1em;
+      }
+
+      #headshot {
+        border-radius: 74px 74px;
+        width: 150px;
+        height: 150px;
+        background-image: url("../img/kevin_circle_150.png");
+        margin: 0 auto;
+      }
+
+      #bio {
+        padding: 0 10px;
+      }
+    }
+
+    h2 {
+      margin-left: 10px;
+    }
+
+    .left {
+      width: 500px;
+      float: left;
+      padding: 0 10px;
+    }
+
+    .right {
+       
+      display: inline-block;
       width: 300px;
-      height: 300px;
-      background-image: url("../img/globe.png");      
       float: right;
+      //margin-top: 20px;
+
+      a:hover {
+        border-bottom: 0px; 
+      }
+
+
+      @img_side: 300px; 
+      #globe {
+        width: @img_side; 
+        height: @img_side; 
+        background-image: url("../img/globe.png");      
+        float: right;
+      }
+
+      #streamgraph {
+        width: @img_side; 
+        height: @img_side; 
+        background-image: url("../img/streamgraph.png");      
+        float: right;
+      }
     }
 
-    #streamgraph {
-      width: 300px;
-      height: 300px;
-      background-image: url("../img/streamgraph.png");      
-      float: right;
-    }
-  }
+    section {
+      width: 100%;
+      display: block;
+      article {
+        margin-bottom: 40px;
 
-  @img_side: 300px; 
-  section {
-    width: 1000px;
-    display: block;
-    article {
-      margin-bottom: 25px;
-    }
-    img {
-      float: right;
+        .media {
+          margin-top: @line_height;
+        }
+      }
+
+//      .zebra_1 {
+//        background-color: rgba(0, 0, 0, 0.03);
+//      }
+      img {
+        float: right;
+      }
     }
   }
 }

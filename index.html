@@ -9,6 +9,7 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="/js/lib/underscore-min.js"></script>
     <script src="/js/lib/less-1.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/pagescripts.js" type="text/javascript"></script>
   </head>
   <body>
     <div id="navbar" class="outset_shadow">
@@ -24,67 +25,65 @@
 
     <div id="wrap_outer" class="clearfix outset_shadow">
       <div id="strip"></div>
-      <div id="wrap">
-        <section id="about">
-          <article>
-            <div id="headshot"></div>
-            <h2 class="center">Kevin Shen</h2>
-            <div id="bio">
-              <p>
-                Currently, I'm an intern at <a href="http://www.getclever.com/">Clever</a> and rising senior at the University of Pennsylvania. My degree program, <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>, is a computer science degree with a small fine arts component. My primary interests are web development and data visualization.
-              </p>
-              <p>
-                I also enjoy animated movies, rock climbing, hiking, video games, and <a href="/streamgraph">sad Canadian indie rock bands</a>.
-              </p>
-            </div>
-          </article>
-        </section>
-        <hr></hr>
-        <section id="work">
-          <article class="clearfix">
-            <h2>Projects</h2>
-            <div class="left">
-              <h3><a href="/nyt">The Geographic New York Times</a></h3>
-              <p>A visualization of which geographic regions are most commonly written about by the New York Times. Countries that are darker have more articles per capita. Alternatively, you can click the "Lights" button to see individual points of interest.</p>
-              <p>Built with d3js, the New York Times API, and Natural Earth.</p>
-            </div>
-            <div class="right">
-              <a id="globe" class="media inset_shadow" href="/nyt"></a>
-            </div>
-          </article>
-          <article class="clearfix">
-            <div class="left">
-              <h3><a href="/streamgraph">Personal Top 40</a></h3>
-              <p>The last four years of my <a href="http://www.last.fm/user/yellowJumpsuit/">last .fm</a> history represented in a streamgraph. The top 40 artists in my library are ordered from most to least listened-to, top to bottom. The vertical thickness of a stream represents the listening frequency for that artist for that month.</p>
-              <p>You may toggle sound by clicking the speaker button in the bottom left; when sound is on, months with strong associations to songs or artists will play a track. This was made for an autobiographical project for my Information Visualization and Design class.</p>
-              <p>Built with d3js and the last.fm API; inspired by <a href="http://www.leebyron.com/else/streamgraph/">Lee Byron's streamgraph</a>.</p>
-            </div>
-            <div class="right">
-              <a id="streamgraph" class="media inset_shadow" href="/streamgraph"></a>
-            </div>
-          </article>
-          <article class="clearfix">
-            <div class="left">
-              <iframe class="media outset_shadow" src="http://player.vimeo.com/video/69445362?badge=0" width="500" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
-            <div class="right">
-              <h3><a href="https://github.com/kshen0/gestures">Gesture-based scrolling</a></h3>
-              <p>An application for touch-free scrolling. Uses your webcam to detect hand motions, which in turn scrolls whatever application is focused by your cursor. Allows for simultaneous browsing and sandwich-eating.</p>
-              <p>Built with <a href="http://www.gabymorenocesar.com/index.html#interests">Gaby Moreno Cesar</a> and <a href="http://www.jocelinlee.com/">Jocelin Lee</a> for our final project in Python Programming.</p>
-            </div>
-          </article>
-          <article class="clearfix">
-            <div class="left">
-              <h3><a href="http://www.datapp.me">datapp</a></h3>
-              <p>A web app that acts as a launch page for all the online services you use. It tracks your browsing history based on a whitelist the user constructs (sorry, NSA) and provides insight to your browsing habits through a series of visualizations.</p>
-              <p>Built with node.js and a Chrome extension for history tracking. Built with a team of six for a web development independent study.</p>
-            </div>
-            <div class="right">
-              <p>Pictures coming soon</p>
-            </div>
-          </article>
-        </section>
-      </div>
+      <section id="about">
+        <article>
+          <div id="headshot"></div>
+          <h2 class="center">Kevin Shen</h2>
+          <div id="bio">
+            <p>
+            <p>
+              Currently, I'm a software development intern at <a href="http://www.getclever.com/">Clever</a> and rising senior at the University of Pennsylvania. My degree program, <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>, is a computer science degree with a small fine arts component. I also TA for Penn's intro computer science course to fuel my Chipotle addiction and have previously endured the summer heat in DC at <a href="http://http://www.wapolabs.com">WaPo Labs</a>
+            </p>
+            <p>
+              I enjoy web development and data visualization as well as animated movies, rock climbing, hiking, video games, and <a href="/streamgraph">sad Canadian indie rock bands</a>.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section id="work">
+        <article class="clearfix">
+          <h2>Projects</h2>
+          <div class="left">
+            <h3><a href="/nyt">The Geographic New York Times</a></h3>
+            <p>A visualization of which geographic regions are most commonly written about by the New York Times. Countries that are darker have more articles per capita. Alternatively, you can click the "Lights" button to see individual points of interest.</p>
+            <p>Built with d3js, the New York Times API, and Natural Earth.</p>
+          </div>
+          <div class="right">
+            <a id="globe" class="media inset_shadow" href="/nyt"></a>
+          </div>
+        </article>
+        <article class="clearfix">
+          <div class="left">
+            <h3><a href="/streamgraph">Personal Top 40</a></h3>
+            <p>The last four years of my <a href="http://www.last.fm/user/yellowJumpsuit/">last .fm</a> history represented in a streamgraph. The top 40 artists in my library are ordered from most to least listened-to, top to bottom. The vertical thickness of a stream represents the listening frequency for that artist for that month.</p>
+            <p>You may toggle sound by clicking the speaker button in the bottom left; when sound is on, months with strong associations to songs or artists will play a track. This was made for an autobiographical project for my Information Visualization and Design class.</p>
+            <p>Built with d3js and the last.fm API; inspired by <a href="http://www.leebyron.com/else/streamgraph/">Lee Byron's streamgraph</a>.</p>
+          </div>
+          <div class="right">
+            <a id="streamgraph" class="media inset_shadow" href="/streamgraph"></a>
+          </div>
+        </article>
+        <article class="clearfix">
+          <div class="left">
+            <iframe class="media outset_shadow" src="http://player.vimeo.com/video/69445362?badge=0" width="500" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+          <div class="right">
+            <h3><a href="https://github.com/kshen0/gestures">Gesture-based scrolling</a></h3>
+            <p>An application for touch-free scrolling. Uses your webcam to detect hand motions, which in turn scrolls whatever application is focused by your cursor. Allows for simultaneous browsing and sandwich-eating.</p>
+            <p>Built with <a href="http://www.gabymorenocesar.com/index.html#interests">Gaby Moreno Cesar</a> and <a href="http://www.jocelinlee.com/">Jocelin Lee</a> for our final project in Python Programming.</p>
+          </div>
+        </article>
+        <article class="clearfix">
+          <div class="left">
+            <h3><a href="http://www.datapp.me">datapp</a></h3>
+            <p>A web app that acts as a launch page for all the online services you use. It tracks your browsing history based on a whitelist the user constructs (sorry, NSA) and provides insight to your browsing habits through a series of visualizations.</p>
+            <p>Built with node.js and a Chrome extension for history tracking. Built with a team of six for a web development independent study.</p>
+          </div>
+          <div class="right">
+            <p>Pictures coming soon</p>
+          </div>
+        </article>
+      </section>
     </div>
   </body>
 </html>

@@ -34,7 +34,7 @@ body:after {
 
 @button_side: 32px;
 #buttons {
-  width: 250px;
+  width: @button_side * 4 + 49; 
   margin: 0 auto;
   ul {
     list-style-type: none;
@@ -43,6 +43,7 @@ body:after {
     li {
       display: inline-block;
       position: relative;
+      padding-right: 10px;
     }
   }
 
@@ -52,6 +53,15 @@ body:after {
   }
   #github_button {
     background-image: url("../img/github_button.png");
+  }
+  #linkedin_button {
+    background-image: url("../img/linkedin_button.png");
+  }
+  #lastfm_button {
+    background-image: url("../img/lastfm_button.png");
+  }
+  #twitter_button {
+    background-image: url("../img/twitter_button.png");
   }
 }
 

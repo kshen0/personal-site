@@ -3,13 +3,6 @@
   var animate_sprite;
 
   $(function() {
-    $('article').each(function(index) {
-      if (index % 2 === 1) {
-        return $(this).addClass('zebra_1 vertical_shadow_1');
-      } else {
-        return $(this).addClass('vertical_shadow_2');
-      }
-    });
     return $('.button').hover(function() {
       return animate_sprite(this, 100, '100%');
     }, function() {

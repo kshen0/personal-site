@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Kevin Shen</title>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37874293-2']);
+      _gaq.push(['_setDomainName', 'kevinshen.net']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
     <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Buenard' rel='stylesheet' type='text/css'>
@@ -50,10 +61,11 @@
           <div id="bio">
             <p>
             <p>
-              Currently, I'm a software development intern at <a href="http://www.getclever.com/">Clever</a> and rising senior at the University of Pennsylvania. My degree program, <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>, is a computer science degree with a minor in fine arts. I also TA for Penn's intro computer science course to fund my Chipotle habit and have previously endured the summer heat in DC at <a href="http://http://www.wapolabs.com">WaPo Labs</a>.
+              I'm a senior at the University of Pennsylvania. My degree program, <a href="http://cg.cis.upenn.edu/dmd_program.html">Digital Media Design</a>, is a computer science degree with a minor in fine arts. I TA on the side for Penn's intro computer science course to fund my Chipotle habit. I was last seen at <a href="http://www.getclever.com/">Clever</a> and have previously endured the summer heat in DC at <a href="http://http://www.wapolabs.com">WaPo Labs</a>.
             </p>
             <p>
-              I enjoy web development and data visualization as well as animated movies, rock climbing, hiking, video games, and <a href="/streamgraph">sad Canadian indie rock bands</a>.
+              I enjoy web development and data visualization as well as animated movies, rock climbing, hiking, video games, and <a href="/musicvis">sad Canadian indie rock bands</a>.
+            <p>Check out my <a href="./Kevin_Shen_Resume.pdf" target="_blank">resume</a> or see a few of my favorite projects below. You can send me message in a bottle at <a href="mailto:kshen@seas.upenn.edu">kshen@seas.upenn.edu</a>.</p>
             </p>
           </div>
         </article>
@@ -64,7 +76,7 @@
           <div class="left">
             <h3><a href="/nyt">The Geographic New York Times</a></h3>
             <p>A visualization of the most commonly referenced countries in the New York Times in 2012. Countries that are darker have more articles per capita. Alternatively, you can click the "Lights" button to see individual points of interest.</p>
-            <p>Built with d3js using Natural Earth mapping data. Article data was collected from the New York Times API using Python.</p>
+            <p>Built with d3.js using Natural Earth mapping data. Article data was collected from the New York Times API using Python.</p>
           </div>
           <div class="right">
             <a id="globe" class="media inset_shadow" href="/nyt"></a>
@@ -73,19 +85,30 @@
         <hr></hr>
         <article class="clearfix">
           <div class="left">
-            <h3><a href="/streamgraph">Personal Top 40</a></h3>
+            <h3><a href="/musicvis">Personal Top 40</a></h3>
             <p>The last four years of my <a href="http://www.last.fm/user/yellowJumpsuit/">last .fm</a> history represented in a streamgraph. The top 40 artists in my library are ordered from most to least plays, top to bottom. The vertical thickness of a stream represents the listening count for that artist for that month.</p>
             <p>You may toggle sound by clicking the speaker button in the bottom left; when sound is on, months with strong associations with songs or artists will play a track. This was made for an autobiographical project for my Information Visualization and Design class.</p>
-            <p>Built with d3js; inspired by <a href="http://www.leebyron.com/else/streamgraph/">Lee Byron's streamgraph</a>. Last.fm data was collected from their API with Python.</p>
+            <p>Built with d3.js; inspired by <a href="http://www.leebyron.com/else/streamgraph/">Lee Byron's streamgraph</a>. Last.fm data was collected from their API with Python.</p>
           </div>
           <div class="right">
-            <a id="streamgraph" class="media inset_shadow" href="/streamgraph"></a>
+            <a id="streamgraph" class="media inset_shadow" href="/musicvis"></a>
           </div>
         </article>
         <hr></hr>
         <article class="clearfix">
           <div class="left">
-            <p>Video coming soon.</p>
+            <h3><a href="/comics">Calvin vs. Garfield</a></h3>
+            <p>Here I attempted to justify my comic strip snobbery by showing that <i>Calvin and Hobbes</i> is objectively more creative than <i>Garfield</i>.</p>
+            <p>I categorized a full transcript of ten years of <i>Calvin and Hobbes</i> and a three year transcript of <i>Garfield</i> according to a word categorization dictionary called the <a href="http://www.kovcomp.co.uk/wordstat/RID.html">Regressive Imagery Dictionary</a>. Results were interpreted based on a <a href="https://proxy.library.upenn.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=keh&AN=5262888&site=ehost-live">psychological study</a>; these results actually suggest <i>Garfield</i> is slightly more creative than <i>Calvin and Hobbes</i>.</p>
+          </div>
+          <div class="right">
+            <a id="streamgraph" class="media inset_shadow" href="/musicvis"></a>
+          </div>
+        </article>
+        <hr></hr>
+        <article class="clearfix">
+          <div class="left">
+            <p>Video coming soon!</p>
             <!--<iframe class="media outset_shadow" src="http://player.vimeo.com/video/69445362?badge=0" width="500" height="270" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>-->
           </div>
           <div class="right">
@@ -99,24 +122,16 @@
           <div class="left">
             <h3><a href="http://www.datapp.me">datapp</a></h3>
             <p>A web app that acts as a launch page for all the online services you use. It tracks your browsing history based on a whitelist the user constructs (sorry, NSA) and provides insight to your browsing habits through a series of visualizations.</p>
-            <p>The app backend is node.js and history is tracked with a Chrome extension. Built with a team of six for a web development independent study. My primary responsibilities were the Chrome extension and backend.</p>
+            <p>Built with a team of six for a web development independent study. My primary contributions were the on the node.js backend and Chrome extension for data collection.</p>
           </div>
           <div class="right">
-            <p>Pictures coming soon.</p>
+            <p>Pictures coming soon!</p>
           </div>
         </article>
       </section>
-      <div id="navbar" class="outset_shadow">
-        <!--
-        <div id="nav_content">
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/Kevin_Shen_Resume.pdf">Resume</a></li>
-            <li><a href="http://www.github.com/kshen0">Github</a></li>
-          </ul>
+      <div id="footer" class="outset_shadow">
+        <div id="content">
         </div>
-        -->
       </div>
     </div>
   </body>

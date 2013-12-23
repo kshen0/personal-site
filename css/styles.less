@@ -15,16 +15,12 @@ html {
 body {
   width: 100%;
   height: 100%;
-  //font-family: 'Buenard', 'Georgia', serif;  
-  //font-family: 'Raleway', 'Futura', 'Helvetica', 'Arial', sans-serif;
   font-family: 'Buenard', 'Georgia', serif;  
   margin: 0px;
-  //background-image: url("../img/noisy_grid.png");
   background-image: url("../img/textured_paper.png");
   background-color: rgba(52, 73, 94, 0.2);
-  //background-color: @grey_blue;
   h2, h3 {
-    font-family: 'Raleway', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Raleway', 'Futura', 'Helvetica', 'Arial', sans-serif;
   }
 }
 
@@ -75,13 +71,14 @@ body:after {
 }
 
 @nav_width: 800px;
-#navbar {width: 100%; height: 20px;
-  background-color: @slate; 
-  //background-color: @cobalt;
+#footer {width: 100%; height: 15px;
+  //background-color: @slate; 
+  background-color: #000;
+  font-family: 'Raleway', 'Futura', 'Helvetica', 'Arial', sans-serif;
   position: relative;
   top: 0px;
 
-  #nav_content {
+  #content {
     width: @nav_width; 
     height: 100%;
     margin: 0 auto;
@@ -251,6 +248,13 @@ body:after {
       width: @img_side; 
       height: @img_side; 
       background-image: url("../img/streamgraph.png");      
+      float: right;
+    }
+
+    #comics {
+      width: @img_side; 
+      height: @img_side; 
+      background-image: url("../img/comics.png");      
       float: right;
     }
   }
